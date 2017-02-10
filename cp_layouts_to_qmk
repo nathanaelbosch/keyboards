@@ -1,0 +1,1 @@
+cp -r my_layouts/* qmk_firmware/keyboards/planck/keymaps/
