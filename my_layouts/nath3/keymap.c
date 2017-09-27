@@ -93,8 +93,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_QWERTY] = {
   {KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC},
-  {KC_ESC,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT},
-  {TD(TD_SHIFT_CAPS), KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT },
+  {F(40),  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT},
+  {KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT },
   {KC_LCTL, KC_RALT, KC_LGUI, KC_LALT, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT}
 },
 
@@ -107,25 +107,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |      |      |      |      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |             |      |      |      |      |      |
- * `-----------------------------------------------------------------------------------'
- */
-[_BLANK] = {
-  {_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______},
-  {_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______},
-  {_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______},
-  {_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______}
-},
-
-/* My Layout
- * Sonderzeichen:r
- * ,-----------------------------------------------------------------------------------.
- * | Tab  |      |      |      |      |      |      |      |      |      |      | Bksp |
- * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | Esc  |      |      |      |      |      |      |      |      |      |      |      |
- * |------+------+------+------+------+------|------+------+------+------+------+------|
- * | Shift|      |      |      |      |      |      |      |      |      |      | Enter|
- * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Ctrl |      | Win  | Alt  |      |    Space    |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
 [_BLANK] = {
@@ -157,7 +138,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * |      |      |      |      |      |      |  /   |  {   |   }  |      |      |      |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      |      |      |      |      |      |  \   |  (   |   )  |      |      |      |
+ * |      |      |      |      |      |      |  \   |  (   |   )  |  ~   |      |      |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      |      |      |      |      |      |  |   |  [   |   ]  |  <   |  >   |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -166,7 +147,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_SYMBOL] = {
   {_______, _______, _______, _______, _______, _______, S(KC_7), F(12),   F(13),   _______, _______, _______},
-  {_______, _______, _______, _______, _______, _______, F(10),   S(KC_8), S(KC_9), _______, _______, _______},
+  {_______, _______, _______, _______, _______, _______, F(10),   S(KC_8), S(KC_9), F(16),   _______, _______},
   {_______, _______, _______, _______, _______, _______, F(11),   F(14),   F(15),   KC_NUBS, S(KC_NUBS), _______},
   {_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______}
 },
@@ -238,8 +219,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_LOWER] = {
   {KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL},
-  {KC_DEL,  F(1),    F(2),    F(3),    KC_F4,   KC_F5,   KC_F6,   KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE},
-  {_______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,S(KC_NUHS),S(KC_NUBS),KC_PGUP, KC_PGDN, _______},
+  {_______, F(1),    F(2),    F(3),    KC_F4,   KC_F5,   KC_F6,   KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE},
+  {_______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,S(KC_NUHS),S(KC_NUBS), KC_PGDN, KC_PGUP, _______},
   {_______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY}
 },
 
@@ -256,8 +237,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_RAISE] = {
   {KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL},
-  {KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS},
-  {_______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_NUHS, KC_NUBS, KC_HOME, KC_END,  _______},
+  {_______,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS},
+  {_______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_NUHS, KC_NUBS, KC_END,  KC_HOME, _______},
   {_______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY}
 },
 
@@ -283,7 +264,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * |      | Reset|      |      |      |      |      |      |Insert|      |      |  Del |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      | NAV  |      |      |      |      |      |Qwerty|Colemk|Dvorak|Plover|      |
+ * |      | NAV  |      |      | Mouse|      |      |Qwerty|Colemk|Dvorak|Plover|      |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -292,7 +273,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_ADJUST] = {
   {_______, RESET,   _______, _______, _______, _______, _______, _______, KC_INS,   _______, _______, KC_DEL},
-  {_______, NAV,     _______, _______, _______, _______, _______, QWERTY,  COLEMAK, DVORAK,  PLOVER,  _______},
+  {_______, NAV,     _______, _______, KC_BTN1, _______, _______, QWERTY,  COLEMAK, DVORAK,  PLOVER,  _______},
   {KC_CAPS, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______},
   {BACKLIT, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______}
 }
@@ -311,6 +292,7 @@ const uint16_t PROGMEM fn_actions[] = {
   [13] = ACTION_MODS_KEY(MOD_RALT, KC_0),                   // }
   [14] = ACTION_MODS_KEY(MOD_RALT, KC_8),                   // [
   [15] = ACTION_MODS_KEY(MOD_RALT, KC_9),                   // ]
+  [16] = ACTION_MODS_KEY(MOD_RALT, KC_RBRC),                // ~
 
   [20] = ACTION_MODS_KEY(MOD_LCTL|MOD_LALT, KC_LEFT),       // Left Screen
   [21] = ACTION_MODS_KEY(MOD_LCTL|MOD_LALT, KC_DOWN),       // Down Screen
@@ -318,6 +300,8 @@ const uint16_t PROGMEM fn_actions[] = {
   [23] = ACTION_MODS_KEY(MOD_LCTL|MOD_LALT, KC_RGHT),       // Right Screen
 
   [30] = ACTION_LAYER_TAP_KEY(_LOWER, KC_COMM),             // Comma on Tap, Lower on hold
+
+  [40] = ACTION_MODS_TAP_KEY(MOD_LGUI, KC_ESC)
 };
 
 qk_tap_dance_action_t tap_dance_actions[] = {
@@ -364,6 +348,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (timer_elapsed(key_timer) < DELAY) {
           if (counter_now == counter){
             register_code(KC_COMM);
+            register_code(KC_SPC);
           }
         }
         layer_off(_LOWER);
@@ -384,6 +369,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (timer_elapsed(key_timer) < DELAY) {
           if (counter_now == counter){
             register_code(KC_DOT);
+            register_code(KC_SPC);
           }
         }
         layer_off(_RAISE);
